@@ -1,24 +1,21 @@
 import type { Metadata } from "next";
-import { Inter,Space_Mono } from "next/font/google";
+import { Inter, Space_Mono } from "next/font/google";
 import "./ui/globals.css";
 
-
-//fonts
+// fonts
 // const inter = Inter({ subsets: ["latin"] });
 const spaceMono = Space_Mono({
   subsets: ["latin"],
-  weight: "400"
+  weight: "400",
 });
 
-
-//metadata for the page
+// metadata for the page
 export const metadata: Metadata = {
   title: "Jigar Bhoye",
   description: "Portfolio of Jigar Bhoye",
 };
 
-
-//layout for the page
+// layout for the page
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spaceMono.className}>{children}</body>
+      <body className={`bg-pattern ${spaceMono.className}`}>
+        {children}
+      </body>
     </html>
   );
 }
