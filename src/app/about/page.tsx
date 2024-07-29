@@ -12,15 +12,18 @@ export default function AboutPage() {
         <h1 className="text-1xl pb-8 text-gray-100">Made with by Jigar</h1>
       </div>
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800 pt-10 pb-20 overflox-x-hidden w-full">
-        <img
-          src={'https://i.pinimg.com/originals/5b/c3/7c/5bc37cc103afa0b5e0abdbaa7c17ae88.jpg'}
-          className="about-page-image"
-          alt="Profile Picture"
-        />
+         <Image
+            src="/cat.jpg"
+            className="about-page-image w-full h-auto rounded-full"
+            alt="Profile Picture"
+            width={300}
+            height={300}
+            priority
+          />
         <div className="max-w-4xl text-center">
           <h1 className="text-4xl font-bold mb-4">Hi 👋, I'm Jigar Bhoye</h1>
           <p className="text-xl mb-6">
-            I’m a passionate developer studying at{" "}
+            I&apos;m a passionate developer studying at{" "}
             <span className="font-semibold">Nirma University</span>, with a
             strong interest in web development and data structures and
             algorithms (DSA). I love exploring new technologies and
@@ -30,7 +33,7 @@ export default function AboutPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">What I'm Currently Learning</h2>
             <p className="text-lg mb-4">
-              Currently, I’m diving deep into web development and DSA. I’m
+              Currently, I&apos;m diving deep into web development and DSA. I&apos;m
               learning how to build efficient and scalable web applications
               using modern tools and frameworks. My goal is to write clean,
               maintainable code and develop solutions that solve real-world
@@ -54,8 +57,8 @@ export default function AboutPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">Hobbies and Interests</h2>
             <p className="text-lg mb-4">
-              When I’m not coding, I enjoy reading tech blogs, exploring open
-              source projects, and participating in hackathons. I’m also an
+              When I&apos;m not coding, I enjoy reading tech blogs, exploring open
+              source projects, and participating in hackathons. I&apos;m also an
               avid gamer and enjoy playing strategy games in my free time.
             </p>
           </section>
@@ -67,7 +70,7 @@ export default function AboutPage() {
               <a href="mailto:jigarbhoye04@gmail.com" className="text-blue-500">
                 jigarbhoye04@gmail.com
               </a>
-              . I’m always open to discussing new projects, creative ideas, or
+              . I&apos;m always open to discussing new projects, creative ideas, or
               opportunities to be part of your visions.
             </p>
             <p className="text-lg">
