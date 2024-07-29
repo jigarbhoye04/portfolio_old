@@ -21,7 +21,7 @@ export default function AboutPage() {
             priority
           />
         <div className="max-w-4xl text-center">
-          <h1 className="text-4xl font-bold mb-4">Hi 👋, I'm Jigar Bhoye</h1>
+          <h1 className="text-4xl font-bold mb-4">Hi 👋, I&apos;m Jigar Bhoye</h1>
           <p className="text-xl mb-6">
             I&apos;m a passionate developer studying at{" "}
             <span className="font-semibold">Nirma University</span>, with a
@@ -31,7 +31,7 @@ export default function AboutPage() {
           </p>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">What I'm Currently Learning</h2>
+            <h2 className="text-2xl font-bold mb-4">What I&apos;m Currently Learning</h2>
             <p className="text-lg mb-4">
               Currently, I&apos;m diving deep into web development and DSA. I&apos;m
               learning how to build efficient and scalable web applications
