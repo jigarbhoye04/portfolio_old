@@ -11,7 +11,7 @@ export default function AboutPage() {
       <div className="flex items-center justify-center w-full bg-gray-100">
         <h1 className="text-1xl pb-8 text-gray-100">Made with by Jigar</h1>
       </div>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800 pt-10 pb-20 overflox-x-hidden w-full">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800 pt-10 pb-20 overflox-x-hidden overflow-y-scroll w-full">
          <Image
             src="/cat.jpg"
             className="about-page-image w-full h-auto rounded-full"

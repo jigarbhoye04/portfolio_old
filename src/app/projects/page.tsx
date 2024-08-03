@@ -10,7 +10,7 @@ export default function ProjectsPage() {
       <div className="flex items-center justify-center w-full bg-gray-100">
         <h1 className="text-1xl pb-8">Made with by Jigar</h1>
       </div> */}
-      <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gray-100 text-gray-800  pt-10 pb-20">
+      <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gray-100 text-gray-800 overflow-y-scroll pt-10 pb-20">
         <div className="max-w-4xl text-center">
           <h1 className="text-4xl font-bold mb-4">Content Soon!!</h1>
           {/* <p className="text-xl mb-6">

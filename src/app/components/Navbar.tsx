@@ -8,7 +8,7 @@ export default function Navbar() {
    const currentRoute = usePathname();
 
    return (
-      <nav className="fixed top-0 left-0 right-0 flex justify-between items-center p-1 bg-white bg-opacity-1 bg-black shadow-lg z-50">
+      <nav className="fixed top-0 left-0 right-0 flex justify-between items-center p-1 bg-gray-700 bg-opacity-1 bg-black shadow-lg z-50">
          {/* Logo Section on the Left */}
          <div className="flex items-center">
             <Link
@@ -30,11 +30,25 @@ export default function Navbar() {
 
          {/* Navigation Links Section on the Right */}
          <div className="flex items-center space-x-4 mr-2">
+         <Link
+               href="/"
+               className={`relative px-4 py-1 text-lg font-bold text-white transition-all duration-500 ease-in-out group rounded-lg ${
+                  currentRoute === "/contact"
+                     ? "bg-gray-200 text-cyan-900"
+                     : "bg-gray-700"
+               }`}
+               rel="noopener noreferrer"
+            >
+               <span className="relative z-10 transition-colors duration-500 ease-in-out group-hover:text-black">
+                  Home
+               </span>
+               <span className="absolute inset-0 scale-x-0 scale-y-1 bg-white transition-transform duration-500 ease-in-out group-hover:scale-x-100 group-hover:scale-y-100 rounded-lg"></span>
+            </Link>
             <Link
                href="/about"
                className={`relative px-4 py-1 text-lg font-bold text-white transition-all duration-500 ease-in-out group rounded-lg ${
                   currentRoute === "/about"
-                     ? "bg-gray-200 text-black"
+                     ? "bg-gray-200 text-cyan-900"
                      : "bg-gray-700"
                }`}
                rel="noopener noreferrer"
@@ -49,7 +63,7 @@ export default function Navbar() {
                href="/projects"
                className={`relative px-4 py-1 text-lg font-bold text-white transition-all duration-500 ease-in-out group rounded-lg ${
                   currentRoute === "/projects"
-                     ? "bg-gray-200 text-black"
+                     ? "bg-gray-200 text-cyan-900"
                      : "bg-gray-700"
                }`}
                rel="noopener noreferrer"
@@ -64,8 +78,8 @@ export default function Navbar() {
                href="https://linktr.ee/jigarbhoye"
                className={`relative px-4 py-1 text-lg font-bold text-white transition-all duration-500 ease-in-out group rounded-lg ${
                   currentRoute === "/contact"
-                     ? "bg-gray-200 text-black"
-                     : "bg-gray-700 rounded-lg"
+                     ? "bg-gray-200 text-blue-900"
+                     : "bg-gray-700"
                }`}
                rel="noopener noreferrer"
             >

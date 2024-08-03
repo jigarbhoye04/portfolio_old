@@ -55,3 +55,10 @@ body {
 
   scroll-behavior: smooth;
 }
+
+/* Ensure that the background pattern adapts to the theme */
+.bg-theme[data-theme='dark'] {
+  background: var(--g1), var(--g1) var(--s) calc(1.73 * var(--s)), var(--g2),
+    var(--g2) var(--s) calc(1.73 * var(--s)), var(--g3) var(--s) 0,
+    var(--g3) 0 calc(1.73 * var(--s)) #000;
+}

@@ -1,27 +1,29 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { ThemeProvider, useTheme } from "./lib/ThemeContext";
+import { Space_Mono } from "next/font/google";
 import "./ui/globals.css";
 
-// fonts
-// const inter = Inter({ subsets: ["latin"] });
+// Fonts
 const spaceMono = Space_Mono({
   subsets: ["latin"],
   weight: "400",
 });
 
-// metadata for the page
+// Metadata for the page
 export const metadata: Metadata = {
   title: "Jigar Bhoye",
   description: "Portfolio of Jigar Bhoye",
-  icons: [{
-    url: "/LOGO.png",
-    rel: "icon",
-    type: "image/png",
-    sizes: "180x180",
-  }],
+  icons: [
+    {
+      url: "/LOGO.png",
+      rel: "icon",
+      type: "image/png",
+      sizes: "180x180",
+    },
+  ],
 };
 
-// layout for the page
+// Layout for the page
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,12 +31,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <body className={`bg-pattern ${spaceMono.className}`}>
-        {children}
-      </body> */}
-      <body className={`${spaceMono.className}`}>
-        {children}
-      </body>
+      {/* <ThemeProvider> */}
+        <body className={`${spaceMono.className}`}>
+          {/* <ThemeWrapper>{children}</ThemeWrapper> */}
+          {children}
+        </body>
+      {/* </ThemeProvider> */}
     </html>
   );
 }
+
+// // Component to wrap content and apply theme context
+// const ThemeWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+//   const { theme } = useTheme();
+
+//   return (
+//     <div data-theme={theme}>
+//       {children}
+//     </div>
+//   );
+// };
+
+// // Ensure you export ThemeToggleButton correctly
+// import ThemeToggleButton from './components/ThemeToggleButton';
