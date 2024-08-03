@@ -1,13 +1,23 @@
+'use client';
+
 import Link from "next/link";
-import Navbar from "../components/Navbar";
-import "../ui/about.css";
 import Image from "next/image";
+import Header from "@/components/shared/Header";
+import "@/components/ui/about.css";
+import { useTheme } from "next-themes";
 
 export default function AboutPage() {
+  const { theme } = useTheme();
+
   return (
     <>
-      <Navbar />
-      <div className="navBarFiller bg-gray-100 h-2"></div>
+      <Header />
+      <div className={`flex flex-col items-center justify-center min-h-screen w-full ${theme === 'dark' ? 'bg-gray-900 text-gray-100' : 'bg-gray-100 text-gray-800'} overflow-y-scroll pt-10 pb-20`}>
+        <div className="max-w-4xl text-center">
+          <h1 className="text-4xl font-bold mb-4">Content Soon!!</h1>
+        </div>
+      </div>
+      {/* <div className="navBarFiller bg-gray-100 h-2"></div>
       <div className="flex items-center justify-center w-full bg-gray-100">
         <h1 className="text-1xl pb-8 text-gray-100">Made with by Jigar</h1>
       </div>
@@ -82,7 +92,7 @@ export default function AboutPage() {
             </p>
           </section>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
