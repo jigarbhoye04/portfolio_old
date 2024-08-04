@@ -17,6 +17,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow: visible;
   color: rgb(var(--foreground-rgb));
