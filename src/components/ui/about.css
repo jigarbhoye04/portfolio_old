@@ -7,20 +7,6 @@ body {
     overflow-x: hidden;
   }
   
-  .tech-icon {
-    display: inline-block;
-    background: #f3f4f6;
-    color: #374151;
-    border-radius: 0.375rem;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .tech-icon:hover {
-    background: #d1d5db;
-  }
-  
   .about-page-image {
     width: 80%;
     max-width: 500px;
@@ -28,6 +14,5 @@ body {
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
-    /* display: block; */
   }
   

@@ -32,14 +32,15 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body className={`${spaceMono.className}`}>
-        <ThemeProvider
+        {/* <ThemeProvider
             attribute="class"
-            defaultTheme="light"
-            enableSystem
+            defaultTheme="dark"
+            // enableSystem
             disableTransitionOnChange
           >
           {children}
-        </ThemeProvider>
+        </ThemeProvider> */}
+        {children}
         </body>
     </html>
   );

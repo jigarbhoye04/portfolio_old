@@ -17,7 +17,7 @@ export default function AboutPage() {
           <h1 className="text-4xl font-bold mb-4">Content Soon!!</h1>
         </div>
       </div>
-      {/* <div className="navBarFiller bg-gray-100 h-2"></div>
+      <div className="navBarFiller bg-gray-100 h-2"></div>
       <div className="flex items-center justify-center w-full bg-gray-100">
         <h1 className="text-1xl pb-8 text-gray-100">Made with by Jigar</h1>
       </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
             </p>
           </section>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
