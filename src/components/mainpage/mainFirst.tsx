@@ -16,9 +16,11 @@ export default function MainFirst() {
             {/* content section */}
             <div className="flex flex-col justify-center items-start">
                <div className="flex items-center space-x-4 mb-4">
-                  <img
+                  <Image
                      src="/avatar.png"
                      alt="avatar"
+                     width={64} // default width
+                     height={64} // default height
                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-full"
                   />
                   <span className="text-sm sm:text-lg bg-neutral-800 py-1 px-3 rounded-full">
@@ -53,7 +55,7 @@ export default function MainFirst() {
                   </Link>
                </div>
                <p className="text-sm sm:text-lg text-gray-400 mb-4">
-                  // Batman & Full-Stack Developer (probably)
+                  {"//"} Batman & Full-Stack Developer (probably)
                </p>
 
                <hr className="border-gray-700 w-full my-4" />
@@ -86,7 +88,9 @@ export default function MainFirst() {
 
                {/* contact section - hidden on mobile */}
                <section className="hidden sm:block">
-                  <h2 className="text-lg sm:text-xl font-bold mb-2">Contact Me</h2>
+                  <h2 className="text-lg sm:text-xl font-bold mb-2">
+                     Contact Me
+                  </h2>
                   <p className="text-sm sm:text-md">
                      Reach out at{" "}
                      <a

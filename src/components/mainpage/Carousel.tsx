@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
+import Image from 'next/image';
 
 type Image = {
   src: string;
@@ -34,10 +35,12 @@ const Carousel = ({ images }: { images: Image[] }) => {
               key={index}
               className="flex-shrink-0 w-full h-80"
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover"
+                width={1920}
+                height={1080}
+                layout="responsive"
               />
             </div>
           ))}
