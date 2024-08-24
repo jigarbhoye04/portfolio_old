@@ -60,3 +60,45 @@ body {
 
   scroll-behavior: smooth;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .overflow-auto {
+    overflow-x: hidden; /* Disable horizontal scrolling on mobile devices */
+  }
+}
+
+/* Larger screens styles */
+@media (min-width: 641px) {
+  .overflow-auto {
+    overflow-x: auto; /* Enable horizontal scrolling on larger screens */
+  }
+}

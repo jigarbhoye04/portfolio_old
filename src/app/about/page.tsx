@@ -1,95 +1,107 @@
-'use client';
+"use client";
 
+import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Header from "@/components/shared/Header";
-import "@/components/ui/about.css";
+import Footer from "@/components/shared/Footer";
+// import Image from "next/image";
+import QButton from "@/components/ui/Button";
+import NextUIcard from "@/components/individual/NextUIcard";
+import { Poppins } from "next/font/google";
 
-export default function AboutPage() {
-  return (
-    <>
-      <Header />
-      <div className="flex flex-col items-center justify-center min-h-screen w-full bg-neutral-900 text-gray-300 overflow-y-scroll px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">Content Soon!!</h1>
-        </div>
-      </div>
-      <div className="navBarFiller bg-neutral-900 h-2"></div>
-      <div className="flex items-center justify-center w-full bg-neutral-900 text-gray-100 py-4 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-lg sm:text-lg md:text-2xl pb-4">Made by Jigar</h1>
-      </div>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-900 text-neutral-300 pt-10 pb-20 px-4 sm:px-6 lg:px-8 overflow-x-hidden overflow-y-scroll">
-         <Image
-            src="/cat.jpg"
-            className="about-page-image w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto rounded-full"
-            alt="Profile Picture"
-            width={300}
-            height={300}
-            priority
-          />
-        <div className="max-w-4xl text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">Hi 👋, I&apos;m Jigar Bhoye</h1>
-          <p className="text-lg sm:text-lg mb-6">
-            I&apos;m a passionate developer studying at{" "}
-            <span className="font-semibold">Nirma University</span>, with a
-            strong interest in web development and data structures and
-            algorithms (DSA). I love exploring new technologies and
-            continuously improving my skills.
-          </p>
+const poppins = Poppins({
+   subsets: ["latin"],
+   weight: "400",
+});
 
-          <section className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4">What I&apos;m Currently Learning</h2>
-            <p className="text-base sm:text-lg mb-4">
-              Currently, I&apos;m diving deep into web development and DSA. I&apos;m
-              learning how to build efficient and scalable web applications
-              using modern tools and frameworks. My goal is to write clean,
-              maintainable code and develop solutions that solve real-world
-              problems.
-            </p>
-          </section>
+const AboutMePage = () => {
+   return (
+      <>
+         <Header />
+         <div
+            className={`${poppins.className} m-12 min-h-screen bg-black text-yellow-50 p-81`}
+         >
+            {/* Header */}
+            <header className="mb-12 text-cyan-200">
+               <h1 className="text-4xl font-bold mb-2">Hello! I&apos;m Jigar 😎</h1>
+               <h2 className="text-2xl font-light">Shaping Digital Perfection!</h2>
+            </header>
 
-          <section className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4">Languages and Tools</h2>
-            <div className="flex justify-center flex-wrap space-x-4">
-              <span className="tech-icon text-base sm:text-lg">🌐 JavaScript</span>
-              <span className="tech-icon text-base sm:text-lg">⚛️ React</span>
-              <span className="tech-icon text-base sm:text-lg">🚀 Next.js</span>
-              <span className="tech-icon text-base sm:text-lg">🎨 CSS</span>
-              <span className="tech-icon text-base sm:text-lg">📊 Node.js</span>
-              <span className="tech-icon text-base sm:text-lg">💻 Git</span>
-              <span className="tech-icon text-base sm:text-lg">🔍 DSA</span>
-            </div>
-          </section>
+            <div className="relative">
+                  <hr className="border-gray-600" />
+                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+                     <Link href="/contact">
+                        <QButton className="inline-block bg-gray-800 text-yellow-50 px-6 py-3 rounded-full hover:bg-gray-700 hover:text-yellow-50 transition">
+                           Send a Message →
+                        </QButton>
+                     </Link>
+                  </div>
+               </div>
 
-          <section className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4">Hobbies and Interests</h2>
-            <p className="text-base sm:text-lg mb-4">
-              When I&apos;m not coding, I enjoy reading tech blogs, exploring open
-              source projects, and participating in hackathons. I&apos;m also an
-              avid gamer and enjoy playing strategy games in my free time.
-            </p>
-          </section>
+            {/* Main content */}
+            <main>
+               {/* Introduction */}
+               <section className="mb-12 mt-12">
+                  <p className="text-lg">
+                     As a Software Student, I am dedicated to crafting scalable
+                     applications, improving user interactions, and optimizing
+                     development processes for greater efficiency.
+                  </p>
+               </section>
 
-          <section>
-            <h2 className="text-xl sm:text-2xl font-bold mb-4">Get in Touch</h2>
-            <p className="text-base sm:text-lg mb-4">
-              Feel free to reach out to me at{" "}
-              <a href="mailto:jigarbhoye04@gmail.com" className="text-blue-500">
-                jigarbhoye04@gmail.com
-              </a>
-              . I&apos;m always open to discussing new projects, creative ideas, or
-              opportunities to be part of your visions.
-            </p>
-            <p className="text-base sm:text-lg">
-              Connect with me on{" "}
-              <Link href="https://linktr.ee/jigarbhoye" className="text-blue-500">
-                Linktree
-              </Link>{" "}
-              to follow my journey.
-            </p>
-          </section>
-        </div>
-      </div>
-    </>
-  );
-}
+               {/* Skills */}
+               <section className="mb-12">
+                  <div className="flex justify-center">
+                     <h3 className="text-xl text-green-400 font-semibold mb-4 inline-block border-b border-white">
+                        I can help you with
+                     </h3>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <SkillCard
+                        number="01"
+                        title="Design"
+                        description="I create intuitive and visually appealing designs that prioritize user experience, ensuring every interaction feels natural and engaging."
+                     />
+                     <SkillCard
+                        number="02"
+                        title="Development"
+                        description="I develop high-performance websites from the ground up, focusing on responsive layouts and smooth user interactions with modern technologies."
+                     />
+                     <SkillCard
+                        number="03"
+                        title="The full package"
+                        description="I can make end-to-end development, from frontend to backend, delivering fully integrated solutions that meet business needs and technical requirements."
+                     />
+                  </div>
+               </section>
+
+               <hr className="border-gray-600" />
+               
+               {/* testing hover card */}
+               {/* <NextUIcard /> */}
+            </main>
+         </div>
+         <Footer />
+      </>
+   );
+};
+
+const SkillCard = ({
+   number,
+   title,
+   description,
+}: {
+   number: string;
+   title: string;
+   description: string;
+}) => (
+   <div className="border border-gray-600 p-6 rounded-lg">
+      <span className="text-sm text-yellow-50 mb-2 block">{number}</span>
+      <hr className="border-gray-600 mb-2" />
+      <h4 className="text-xl font-semibold mb-4">{title}</h4>
+      <p className="text-yellow-50">{description}</p>
+   </div>
+);
+
+export default AboutMePage;

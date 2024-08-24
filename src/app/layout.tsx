@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
-import '@/components/ui/globals.css'
+import '@/styles/global.css'
 import { ThemeProvider } from "@/components/theme-provider";
 
 // Fonts
