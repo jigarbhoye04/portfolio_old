@@ -49,19 +49,35 @@ const Footer = () => {
                </div>
                <div className="ml-10">
                   <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
-                  <ul className="flex space-x-4">
+                  <ul className="flex space-x-4 space-y-2">
                      <li>
                         <a
                            href="https://www.linkedin.com/in/jigar-bhoye-188667251/"
                            target="_blank"
                            rel="noopener noreferrer"
                         >
-                           <FaLinkedin className="text-blue-500 w-6 h-8" />
+                           <FaLinkedin className="text-blue-500 w-6 h-8 mt-2" />
                         </a>
                      </li>
-                     {/* <li><a href="https://behance.net" target="_blank" rel="noopener noreferrer"><FaBehance className="text-blue-400" /></a></li>
-              <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer"><FaDribbble className="text-pink-500" /></a></li>
-              <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer"><FaDiscord className="text-purple-500" /></a></li> */}
+                     {/* <li>
+                        <a
+                           href="https://behance.net"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           <FaBehance className="text-blue-400 w-6 h-8" />
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="https://dribbble.com"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           <FaDribbble className="text-pink-500 w-6 h-8" />
+                        </a>
+                     </li> */}
+
                      <li>
                         <a
                            href="https://github.com/jigarbhoye04"
@@ -69,6 +85,15 @@ const Footer = () => {
                            rel="noopener noreferrer"
                         >
                            <FaGithub className="text-gray-100 w-6 h-8" />
+                        </a>
+                     </li>
+                     <li>
+                        <a
+                           href="https://discord.com/channels/jigx.04"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           <FaDiscord className="bg-blue-700 rounded-full p-1 text-gray-200 w-8 h-8" />
                         </a>
                      </li>
                      <li>
@@ -124,7 +149,7 @@ const Footer = () => {
          </div>
 
          {/* Bottom Section */}
-         <div className="mt-10 bg-gray-900 p-4 rounded-full flex flex-col sm:flex-row sm:justify-between items-center">
+         <div className="mt-10 bg-gray-900 p-3 rounded-lg flex flex-col sm:flex-row sm:justify-between items-center">
             <p className="text-sm text-blue-500 mb-2 sm:mb-0">
                <Link
                   href="/"

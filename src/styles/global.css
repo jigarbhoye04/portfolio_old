@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;   /* Set to black */
+  --background-end-rgb: 0, 0, 0;     /* Set to black */
+  --accent-rgb: 128, 128, 128; /* Neutral gray for light mode */
+  --card-background-rgb: 245, 245, 245; /* Light gray for card background in light mode */
+  --selection-background-rgb: 169, 169, 169; /* Gray for text selection */
+  --selection-foreground-rgb: 255, 255, 255; /* White for text selection */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +17,19 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --accent-rgb: 169, 169, 169; /* Darker gray for dark mode */
+    --card-background-rgb: 28, 28, 30; /* Dark gray for card background in dark mode */
+    --selection-background-rgb: 220, 200, 180; /* Warm beige for text selection */
+    --selection-foreground-rgb: 50, 50, 50; /* Dark gray for text selection */    
   }
+}
+
+.accent {
+  @apply text-[rgb(var(--accent-rgb))];
+}
+
+.card {
+  @apply bg-[rgb(var(--card-background-rgb))] p-4 rounded-lg shadow-lg;
 }
 
 html {
@@ -22,6 +37,7 @@ html {
 }
 
 body {
+  @apply bg-[rgb(var(--background-start-rgb))] text-[rgb(var(--foreground-rgb))];
   overflow: visible;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -32,6 +48,28 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Custom Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(var(--background-end-rgb));
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--accent-rgb)); /* Using accent color for scrollbar */
+  border-radius: 10px;
+  border: solid rgb(var(--background-end-rgb));
+}
+
+/* Text Selection Styling */
+::selection {
+  background: rgb(var(--selection-background-rgb));
+  color: rgb(var(--selection-foreground-rgb));
+}
+
+/* Additional styles remain the same... */
 @layer utilities {
   .text-balance {
     text-wrap: balance;

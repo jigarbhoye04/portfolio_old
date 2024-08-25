@@ -36,7 +36,7 @@ export default function MainFirst() {
                   <span className="text-teal-400">DEVELOPER(yes)</span>.
                </h1>
                <p className="text-lg sm:text-xl mb-4">
-                  I create stuff (nonsense!) --------- <br />
+                  I create stuff (!) <br />
                   <span className="text-purple-500">consistent</span>,{" "}
                   <span className="text-yellow-500">mostly aesthetics</span>,
                   and <span className="text-teal-400">some fun!</span>
@@ -61,8 +61,8 @@ export default function MainFirst() {
                <hr className="border-gray-700 w-full my-4" />
 
                <p className="text-sm sm:text-lg mb-4">
-                  Passionate developer studying at{" "}
-                  <span className="font-semibold">Nirma University</span>. I
+                  Passionate developer and Pre Final Year student at{" "}
+                  <span className="font-semibold border-b border-gray-700">Nirma University</span>. I
                   love web development, data structures, and exploring new
                   technologies.
                </p>
@@ -72,9 +72,10 @@ export default function MainFirst() {
                   <h2 className="text-lg sm:text-xl font-bold mb-2 text-purple-400">
                      Current Focus
                   </h2>
-                  <p className="text-sm sm:text-md">
+                  <p className="text-sm sm:text-lg">
                      Concentrating on web development and leveraging modern
-                     tools to build scalable and efficient applications
+                     tools to build scalable and efficient applications &
+                     Parrallely griding on <span className="border-b border-gray-700">competitive programming</span> to enhance my problem-solving skills.
                   </p>
                </section>
 

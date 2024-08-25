@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 // import "@styles/about.css";
 import { useTheme } from "next-themes";
 import Head from "next/head";
@@ -96,6 +97,8 @@ export default function ProjectsPage() {
                </div>
             </main>
          </div>
+         <hr className="border-gray-700 w-full my-4" />
+         <Footer />
       </>
    );
 }
