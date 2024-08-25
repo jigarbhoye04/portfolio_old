@@ -17,7 +17,7 @@ interface Project {
    year: string;
    tags: string[];
    visitLink: string;
-    liveLink?: string;
+   liveLink?: string;
 }
 
 const projects: Project[] = [
@@ -40,15 +40,15 @@ const projects: Project[] = [
    {
       title: "Static Blog",
       description: [
-        "Built with Astro for optimal speed and efficiency in web development.",
-        "Based on the AstroPaperTheme template with room for enhancements.",
-        "Features a fully responsive and accessible design for all devices.",
-        "SEO-friendly structure to improve search engine visibility.",
-        "Supports light and dark modes for a personalized user experience.",
-        "Includes fuzzy search functionality for quick and accurate results.",
-        "Offers super fast performance with pagination for better content management.",
-        "Provides a sitemap and RSS feed (currently disabled) for better indexing and updates."
-      ],      
+         "Built with Astro for optimal speed and efficiency in web development.",
+         "Based on the AstroPaperTheme template with room for enhancements.",
+         "Features a fully responsive and accessible design for all devices.",
+         "SEO-friendly structure to improve search engine visibility.",
+         "Supports light and dark modes for a personalized user experience.",
+         "Includes fuzzy search functionality for quick and accurate results.",
+         "Offers super fast performance with pagination for better content management.",
+         "Provides a sitemap and RSS feed (currently disabled) for better indexing and updates.",
+      ],
       image: "/stuff.png",
       year: "2024",
       tags: ["Next.js", "Tailwind CSS", "Astro", "Markdown"],
@@ -56,19 +56,33 @@ const projects: Project[] = [
       liveLink: "https://jigarbhoyestuff.vercel.app/",
    },
    {
-    title: "Next.js Dashboard App",
-    description: [
-      "Built with Next.js to provide a dynamic and user-friendly dashboard application.",
-      "Features data visualization with various charts and graphs for effective data representation.",
-      "Includes task management capabilities with a clean and intuitive interface.",
-      "Responsive design ensures compatibility across different devices and screen sizes."
-    ],
-    image: "/dash.png",
-    year: "2024",
-    tags: ["Next.js", "Dashboard", "Data Visualization", "Task Management"],
-    visitLink: "https://github.com/jigarbhoye04/nextjs-dashboard-app",
-    // liveLink: "",
-  },  
+      title: "Next.js Dashboard App",
+      description: [
+         "Built with Next.js to provide a dynamic and user-friendly dashboard application.",
+         "Features data visualization with various charts and graphs for effective data representation.",
+         "Includes task management capabilities with a clean and intuitive interface.",
+         "Responsive design ensures compatibility across different devices and screen sizes.",
+      ],
+      image: "/dash.png",
+      year: "2024",
+      tags: ["Next.js", "Dashboard", "Data Visualization", "Task Management"],
+      visitLink: "https://github.com/jigarbhoye04/nextjs-dashboard-app",
+      // liveLink: "",
+   },
+   {
+      title: "Page Replacement Algorithm",
+      description: [
+         "Efficient simulation of various page replacement algorithms.",
+         "Supports algorithms like FIFO, LRU, and Optimal.",
+         "Detailed statistics on page faults and hits for performance analysis.",
+      ],
+      image: "/page-replace.png",
+      year: "March 2024",
+      tags: ["JavaScript", "HTML", "Tailwind CSS"],
+      visitLink: "https://github.com/jigarbhoye04/os-page-replacement",
+      liveLink: "https://os-page-replacement-algo.netlify.app/",
+   },
+
    // Add more projects here...
 ];
 
@@ -92,7 +106,12 @@ export default function ProjectsPage() {
                </div>
                <div className="space-y-8">
                   {projects.map((project, index) => (
-                     <ProjectCard subtitle={""} key={index} {...project} liveLink={project.liveLink || ""} />
+                     <ProjectCard
+                        subtitle={""}
+                        key={index}
+                        {...project}
+                        liveLink={project.liveLink || ""}
+                     />
                   ))}
                </div>
             </main>
