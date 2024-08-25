@@ -8,8 +8,8 @@
   --background-end-rgb: 0, 0, 0;     /* Set to black */
   --accent-rgb: 128, 128, 128; /* Neutral gray for light mode */
   --card-background-rgb: 245, 245, 245; /* Light gray for card background in light mode */
-  --selection-background-rgb: 169, 169, 169; /* Gray for text selection */
-  --selection-foreground-rgb: 255, 255, 255; /* White for text selection */
+  --selection-background-rgb: 220, 200, 180; /* Warm beige for text selection */
+  --selection-foreground-rgb: 50, 50, 50; /* Dark gray for text selection */  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +20,7 @@
     --accent-rgb: 169, 169, 169; /* Darker gray for dark mode */
     --card-background-rgb: 28, 28, 30; /* Dark gray for card background in dark mode */
     --selection-background-rgb: 220, 200, 180; /* Warm beige for text selection */
-    --selection-foreground-rgb: 50, 50, 50; /* Dark gray for text selection */    
+    --selection-foreground-rgb: 50, 50, 50; /* Dark gray for text selection */      
   }
 }
 
