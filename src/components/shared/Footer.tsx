@@ -12,6 +12,7 @@ import {
    FaFacebook,
    FaSpotify,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
    return (
@@ -41,8 +42,8 @@ const Footer = () => {
                         </Link>
                      </li>
                      <li>
-                        <Link href="/contact" className="text-yellow-500">
-                           Contact
+                        <Link href="https://linktr.ee/jigarbhoye" className="text-yellow-500">
+                           Linktree
                         </Link>
                      </li>
                   </ul>
@@ -89,6 +90,15 @@ const Footer = () => {
                      </li>
                      <li>
                         <a
+                           href="https://x.com/jigarbhoye04"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                        >
+                           <FaXTwitter className="text-gray-100 w-6 h-8" />
+                        </a>
+                     </li>
+                     <li>
+                        <a
                            href="https://discord.com/channels/jigx.04"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -105,7 +115,7 @@ const Footer = () => {
                            <FaInstagram className="text-pink-500 w-6 h-8" />
                         </a>
                      </li>
-                     <li>
+                     {/* <li>
                         <a
                            href="https://facebook.com/jigarbhoyeofficial"
                            target="_blank"
@@ -113,7 +123,7 @@ const Footer = () => {
                         >
                            <FaFacebook className="text-blue-500 w-6 h-8" />
                         </a>
-                     </li>
+                     </li> */}
                      <li>
                         <a
                            href="https://open.spotify.com/user/rlf9k73tkyeg4n0o34ezact5f"
