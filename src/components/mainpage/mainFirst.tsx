@@ -62,8 +62,10 @@ export default function MainFirst() {
 
                <p className="text-sm sm:text-lg mb-4">
                   Passionate developer and Pre Final Year student at{" "}
-                  <span className="font-semibold border-b border-gray-700">Nirma University</span>. I
-                  love web development, data structures, and exploring new
+                  <span className="font-semibold border-b border-gray-700">
+                     Nirma University
+                  </span>
+                  . I love web development, data structures, and exploring new
                   technologies.
                </p>
 
@@ -75,7 +77,11 @@ export default function MainFirst() {
                   <p className="text-sm sm:text-lg">
                      Concentrating on web development and leveraging modern
                      tools to build scalable and efficient applications &
-                     Parrallely griding on <span className="border-b border-gray-700">competitive programming</span> to enhance my problem-solving skills.
+                     Parrallely griding on{" "}
+                     <span className="border-b border-gray-700">
+                        competitive programming
+                     </span>{" "}
+                     to enhance my problem-solving skills.
                   </p>
                </section>
 
@@ -84,7 +90,9 @@ export default function MainFirst() {
                   <h2 className="text-lg sm:text-xl font-bold mb-2 text-sky-400">
                      Tech Skills
                   </h2>
-                  <IconsTech />
+                  <div className="flex justify-center items-center sm:mx-20">
+                     <IconsTech />
+                  </div>
                </section>
 
                {/* contact section - hidden on mobile */}

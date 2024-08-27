@@ -29,6 +29,7 @@ const Footer = () => {
             {/* Center Section */}
             <div className="flex justify-center">
                <div>
+                  
                   <h4 className="text-lg font-semibold mb-4">Explore</h4>
                   <ul className="space-y-2">
                      <li>
