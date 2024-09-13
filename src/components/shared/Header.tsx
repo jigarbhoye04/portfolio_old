@@ -38,7 +38,7 @@ export default function Header() {
                className="flex items-center"
             >
                <Image
-                  className="ml-4 border rounded-full border-white opacity-70"
+                  className="ml-4 border rounded-full border-white opacity-70 z-100"
                   src="/LOGO.png"
                   alt="Logo"
                   width={30}
@@ -138,7 +138,7 @@ export default function Header() {
                </DropdownMenu>
             </Dropdown>
          </div>
-
+         
          {/* Mobile Menu */}
          {isMobileMenuOpen && (
             <div className="absolute top-16 left-0 w-11/12 mx-auto bg-neutral-900 text-white flex flex-col items-center space-y-2 p-4 border border-neutral-700 rounded-lg sm:hidden z-50">

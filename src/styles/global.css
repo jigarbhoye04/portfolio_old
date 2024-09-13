@@ -140,3 +140,17 @@ body::-webkit-scrollbar-thumb {
     overflow-x: auto; /* Enable horizontal scrolling on larger screens */
   }
 }
+
+
+/* Intro Loading */
+.transition-transform {
+  transition: transform 0.5s ease-in-out;
+}
+
+.translate-y-full {
+  transform: translateY(-100vh); 
+}
+
+.translate-y-0 {
+  transform: translateY(0); 
+}
