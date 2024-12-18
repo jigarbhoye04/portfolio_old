@@ -32,17 +32,27 @@ export default function FullScreenIntro({
    }, []);
 
    useEffect(() => {
-      const interval = setInterval(nextGreeting, 200);
+      const hasRunOnce = sessionStorage.getItem('hasRunOnce');
+
+      if (hasRunOnce && currentIndex === greetings.length - 1) {
+         onComplete();
+         return;
+      }
 
       if (currentIndex === greetings.length - 1) {
-         clearInterval(interval);
+         sessionStorage.setItem('hasRunOnce', 'true');
+      }
+
+      if (currentIndex < greetings.length - 1) {
+         const interval = setInterval(nextGreeting, 200);
+
+         return () => clearInterval(interval);
+      } else {
          setTimeout(() => {
             setIsSliding(true);
             setTimeout(onComplete, 500);
          }, 1000);
       }
-
-      return () => clearInterval(interval);
    }, [currentIndex, nextGreeting, onComplete]);
 
    return (

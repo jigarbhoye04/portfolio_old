@@ -16,8 +16,8 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
    return (
-      <footer className="bg-black text-white m-8">
-         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <footer className="bg-neutral-900 text-white p-8">
+         <div className="bg-neutral-900 container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             {/* Left Section */}
             <div>
                <h4 className="text-lg font-semibold text-yellow-50 mb-4">
@@ -160,7 +160,7 @@ const Footer = () => {
          </div>
 
          {/* Bottom Section */}
-         <div className="mt-10 bg-gray-900 p-3 rounded-lg flex flex-col sm:flex-row sm:justify-between items-center">
+         <div className="mt-10 bg-black p-3 rounded-lg flex flex-col sm:flex-row sm:justify-between items-center">
             <p className="text-sm text-blue-500 mb-2 sm:mb-0">
                <Link
                   href="/"

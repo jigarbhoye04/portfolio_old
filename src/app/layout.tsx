@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <body className={`${spaceMono.className}`}>
+        <body className={`${spaceMono.className} bg-neutral-900`}>
         {/* <ThemeProvider
             attribute="class"
             defaultTheme="dark"

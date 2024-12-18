@@ -1,47 +1,56 @@
-// // src/components/ui/Button.tsx
-// import React from 'react';
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
 
-// interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-//   variant?: 'primary' | 'secondary';
-// }
+import { cn } from "@/lib/utils"
 
-// export function Button({ variant = 'primary', className, ...props }: ButtonProps) {
-//   const baseStyles = "px-4 py-2 font-semibold rounded-lg transition-colors focus:outline-none";
-//   const variantStyles = {
-//     primary: "bg-blue-500 text-white hover:bg-blue-600",
-//     secondary: "bg-gray-300 text-gray-700 hover:bg-gray-400"
-//   };
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:ring-offset-neutral-950 dark:focus-visible:ring-neutral-300",
+  {
+    variants: {
+      variant: {
+        default: "bg-neutral-900 text-neutral-50 hover:bg-neutral-900/90 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-50/90",
+        destructive:
+          "bg-red-500 text-neutral-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-neutral-50 dark:hover:bg-red-900/90",
+        outline:
+          "border border-neutral-200 bg-white hover:bg-neutral-100 hover:text-neutral-900 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
+        secondary:
+          "bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80",
+        ghost: "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
+        link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
 
-//   return (
-//     <button
-//       className={`${baseStyles} ${variantStyles[variant]} ${className}`}
-//       {...props}
-//     />
-//   );
-// }
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
+}
 
-import React from "react";
-import clsx from "clsx";
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Button.displayName = "Button"
 
-const QButton = ({
-   children,
-   className,
-}: {
-   children: React.ReactNode;
-   className?: string;
-}) => {
-   return (
-      <button
-         className={clsx(
-            "px-8 py-4 rounded-full text-black relative overflow-hidden",
-            "bg-neutral-700 hover:bg-blue-500 transition-colors duration-300",
-            "before:absolute before:left-0 before:bottom-0 before:w-full before:h-full before:bg-blue-500 before:origin-bottom before:scale-y-0 hover:before:scale-y-100 before:transition-transform before:duration-300",
-            className
-         )}
-      >
-         <span className="relative z-10">{children}</span>
-      </button>
-   );
-};
-
-export default QButton;
+export { Button, buttonVariants }
