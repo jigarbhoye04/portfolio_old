@@ -37,7 +37,7 @@ const ContactForm: React.FC = () => {
 
     try {
       const response = await emailjs.sendForm(
-        "XX6tCOJTqYtM1mIQ6",
+        "i2y2ea9FZtrcMQBMn",
         "service_at64jza",
         e.currentTarget as HTMLFormElement,
         "template_1q7z7qz",
