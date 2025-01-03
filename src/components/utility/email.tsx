@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="container  px-4 py-8 max-w-md">
+    <form onSubmit={handleSubmit} className="container mx-auto px-4 py-8 max-w-md">
       <h2 className="text-2xl font-bold text-center mb-8">Send Email</h2>
       <div className="flex flex-col space-y-4">
         <div className="flex flex-col">
@@ -103,7 +103,7 @@ const ContactForm: React.FC = () => {
             rows={4}
             value={formValues.message}
             onChange={handleChange}
-            className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-black"
           />
         </div>
         <button
