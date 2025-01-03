@@ -9,9 +9,9 @@ interface FormValues {
 
 const ContactForm: React.FC = () => {
 
-  const PUBLIC_KEY = process.env.PUBLIC_KEY || '';
-  const SERVICE_ID = process.env.SERVICE_ID || '';
-  const TEMPLATE_ID = process.env.TEMPLATE_ID || '';
+  const PUBLIC_KEY = "XX6tCOJTqYtM1mIQ6";
+  const SERVICE_ID = "service_at64jza";
+  const TEMPLATE_ID = "template_1q7z7qz";
 
   const [formValues, setFormValues] = useState<FormValues>({
     name: '',
@@ -37,10 +37,10 @@ const ContactForm: React.FC = () => {
 
     try {
       const response = await emailjs.sendForm(
-        SERVICE_ID,
-        TEMPLATE_ID,
+        "XX6tCOJTqYtM1mIQ6",
+        "service_at64jza",
         e.currentTarget as HTMLFormElement,
-        PUBLIC_KEY
+        "template_1q7z7qz",
       );
 
       if (response.status === 200) {
