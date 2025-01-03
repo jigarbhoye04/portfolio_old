@@ -7,13 +7,13 @@ import { useState } from "react";
 import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
 import { MdOutlinePerson4 } from "react-icons/md";
-import {
-   Dropdown,
-   DropdownTrigger,
-   DropdownMenu,
-   DropdownSection,
-   DropdownItem,
-} from "@nextui-org/dropdown";
+// import {
+//    Dropdown,
+//    DropdownTrigger,
+//    DropdownMenu,
+//    DropdownSection,
+//    DropdownItem,
+// } from "@nextui-org/dropdown";
 import { Button } from "@nextui-org/button";
 
 export default function Header() {
@@ -96,6 +96,15 @@ export default function Header() {
 
          {/* Dropdown Menu */}
          <div className="hidden md:block">
+            <a
+               href="/contact"
+               className="text-white border-neutral-700 hover:border-blue-400 
+               border px-4 py-2 rounded-md"
+            >
+               Contact Me
+            </a>
+         </div>
+         {/* <div className="hidden md:block">
             <Dropdown>
                <DropdownTrigger>
                   <Button
@@ -137,8 +146,8 @@ export default function Header() {
                   </DropdownItem>
                </DropdownMenu>
             </Dropdown>
-         </div>
-         
+         </div> */}
+
          {/* Mobile Menu */}
          {isMobileMenuOpen && (
             <div className="absolute top-16 left-0 w-11/12 mx-auto bg-neutral-900 text-white flex flex-col items-center space-y-2 p-4 border border-neutral-700 rounded-lg sm:hidden z-50">
